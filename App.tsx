@@ -1,20 +1,38 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StatusBar } from "expo-status-bar";
 
-export default function App() {
+import { NavigationContainer, useNavigationContainerRef } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { RootStackParamList } from "./src/screens/RootStackParams";
+import "react-native-gesture-handler";
+
+import { HomeScreen, AboutScreen } from "./src/screens";
+
+const Stack = createStackNavigator<RootStackParamList>();
+
+const App: React.FC = () => {
+  const navigationRef = useNavigationContainerRef();
+
+  const screens: {
+    name: keyof RootStackParamList;
+    component: React.ReactNode;
+  }[] = [
+    { name: "Home", component: HomeScreen },
+    { name: "About", component: AboutScreen },
+  ];
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+    <>
       <StatusBar style="auto" />
-    </View>
+      <NavigationContainer ref={navigationRef}>
+        <Stack.Navigator screenOptions={{ headerShown: false, animationEnabled: true }}>
+          {screens.map((it: any) => (
+            <Stack.Screen key={it.name} {...it} />
+          ))}
+        </Stack.Navigator>
+      </NavigationContainer>
+    </>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;

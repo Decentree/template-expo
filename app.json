@@ -1,8 +1,10 @@
 {
   "expo": {
-    "name": "template-expo",
-    "slug": "template-expo",
+    "name": "PROJECT_NAME",
+    "description": "PROJECT_NAME",
+    "slug": "PROJECT_NAME",
     "version": "1.0.0",
+    "platforms": ["ios", "android", "web"],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -13,20 +15,19 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false
     },
     "android": {
+      "permissions": [],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "barStyle": "default"
     }
   }
 }

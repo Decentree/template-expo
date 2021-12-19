@@ -15,7 +15,9 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ text, buttonText, onPress, isAbout }) => {
   return (
     <View style={{ alignItems: "center" }}>
-      <Text style={{ paddingBottom: 20, fontSize: 18, fontWeight: "500", textAlign: "center" }}>{text}</Text>
+      <Text style={{ paddingBottom: 20, fontSize: 18, fontWeight: "500", textAlign: "center", color: "#fff" }}>
+        {text}
+      </Text>
       {isAbout && (
         <View
           style={{
@@ -28,13 +30,13 @@ const Card: React.FC<CardProps> = ({ text, buttonText, onPress, isAbout }) => {
           <Ionicons
             size={36}
             name="logo-github"
-            style={{ color: "#000" }}
+            style={{ color: "#fff" }}
             onPress={() => Linking.openURL("https://github.com/Decentree")}
           />
           <Ionicons
             size={36}
             name="logo-linkedin"
-            style={{ color: "#000" }}
+            style={{ color: "#fff" }}
             onPress={() => Linking.openURL("https://www.linkedin.com/company/decentree")}
           />
         </View>

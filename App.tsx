@@ -23,7 +23,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
       <NavigationContainer ref={navigationRef}>
         <Stack.Navigator screenOptions={{ headerShown: false, animationEnabled: true }}>
           {screens.map((it: any) => (

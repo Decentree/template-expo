@@ -10,7 +10,7 @@ import { HomeScreen, AboutScreen } from "./src/screens";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
-const App: React.FC = () => {
+const App = () => {
   const navigationRef = useNavigationContainerRef();
 
   const screens: {

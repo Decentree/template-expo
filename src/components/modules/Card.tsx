@@ -12,7 +12,14 @@ interface CardProps {
   isAbout?: boolean;
 }
 
-const Card: React.FC<CardProps> = ({ text, buttonText, onPress, isAbout }) => {
+const Card = (
+  {
+    text,
+    buttonText,
+    onPress,
+    isAbout
+  }: CardProps
+) => {
   return (
     <View style={{ alignItems: "center" }}>
       <Text style={{ paddingBottom: 20, fontSize: 18, fontWeight: "500", textAlign: "center", color: "#fff" }}>

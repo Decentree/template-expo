@@ -11,7 +11,7 @@ import i18n from "../../i18n";
 
 type HomeScreenProp = StackNavigationProp<RootStackParamList, "Home">;
 
-const Home: React.FC = () => {
+const Home = () => {
   const navigation = useNavigation<HomeScreenProp>();
 
   return (

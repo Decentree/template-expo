@@ -6,7 +6,12 @@ interface ButtonProps {
   onPress: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ text, onPress }) => {
+const Button = (
+  {
+    text,
+    onPress
+  }: ButtonProps
+) => {
   return (
     <TouchableOpacity
       onPress={onPress}

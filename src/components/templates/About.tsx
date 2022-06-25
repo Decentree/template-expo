@@ -11,7 +11,7 @@ import i18n from "../../i18n";
 
 type AboutScreenProp = StackNavigationProp<RootStackParamList, "About">;
 
-const About: React.FC = () => {
+const About = () => {
   const navigation = useNavigation<AboutScreenProp>();
 
   return (
